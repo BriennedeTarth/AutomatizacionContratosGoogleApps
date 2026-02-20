@@ -30,7 +30,7 @@ El Google Doc debe contener etiquetas entre llaves dobles, por ejemplo:
 - `{{Fecha}}`
 
 
-##Configuración de Activadores (Triggers)
+## Configuración de Activadores (Triggers)
 Para que el sistema funcione automáticamente, debes configurar dos activadores en la consola de Google Apps Script:
 
 ### Generación de Contrato:
