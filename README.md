@@ -19,9 +19,26 @@ Para usar este script, debes actualizar las constantes en el archivo `main.gs`:
 - `ID_PLANTILLA`: El ID de tu Google Doc modelo.
 - `ID_CARPETA_RAIZ`: El ID de la carpeta de Drive donde se guardará todo.
 - `EMAIL_ADMINISTRACION`: Correo de la persona que aprobará los contratos.
+- `COL_RELLENADO`: Columna donde se guarda la informacion de rellenado.
+- `COL_VERIFICADO`: Columna donde se guarda la informacion de verificado.
+- `COL_ENVIADO`: Columna donde se guarda la informacion de enviado.
 
 ## Requisitos de la Plantilla
 El Google Doc debe contener etiquetas entre llaves dobles, por ejemplo:
 - `{{NombreCliente}}`
 - `{{CICliente}}`
 - `{{Fecha}}`
+
+
+##Configuración de Activadores (Triggers)
+Para que el sistema funcione automáticamente, debes configurar dos activadores en la consola de Google Apps Script:
+
+### Generación de Contrato:
+
+- Seleccionar: trigger_RellenarContrato
+- Evento: De la hoja de cálculo -> Al enviarse el formulario
+
+### Envío de PDF:
+
+- Seleccionar: trigger_EnviarCorreoVerificado
+- Evento: De la hoja de cálculo -> Al realizarse cambios
